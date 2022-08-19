@@ -1,12 +1,6 @@
 import React from 'react'
-import { CartWidget } from './cartWidget/CartWidget';
-import Form from './Form';
-
-
-
-
-
-
+import { Form } from './Form';
+import {CartWidget} from "../fragment/cartWidget/CartWidget"
 export const NavBar = () => {
   return (
     <div id="" className="">
@@ -28,7 +22,7 @@ export const NavBar = () => {
             <Form contBuscar="Productos" />
             <CartWidget />
           </div>
-         
+
         </div>
       </nav>
     </div>

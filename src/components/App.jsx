@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { NavBar } from './fragment/NavBar';
+import { NavBar } from './navBar/NavBar';
 import { ItemListContainer } from './fragment/itemListContainer/ItemListContainer';
 
 

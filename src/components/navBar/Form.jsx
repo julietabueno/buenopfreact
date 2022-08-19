@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Form = () => {
+export const Form = () => {
     return (
         <>
             <form className="d-flex" role="search">
@@ -11,4 +11,4 @@ const Form = () => {
     );
 }
 
-export default Form;
+
