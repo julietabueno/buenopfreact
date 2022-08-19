@@ -1,0 +1,17 @@
+.classContainer{
+    margin-top: 2%;
+    display:grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    box-shadow:currentColor;
+
+
+}
+img{
+    border-radius: 50%;
+    width: 50%;
+
+
+}
