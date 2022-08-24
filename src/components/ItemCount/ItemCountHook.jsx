@@ -7,7 +7,7 @@ import "./ItemCount.css"
 export const ItemCountHook = ({ stock, onAdd }) => {
     const { add, substract, count } = useItemCount(stock)
     return (
-        < div >
+        < div className='itemCount'>
             <div className='itemCountBox'>
                 <button className='btn' onClick={() => { add(count) }}>
                     +
