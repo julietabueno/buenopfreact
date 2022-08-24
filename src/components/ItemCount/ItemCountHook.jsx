@@ -1,5 +1,6 @@
 import React from 'react'
-import { useItemCount } from '../hooks/useItemCount'
+import { useItemCount } from '../../hooks/useItemCount'
+
 import "./ItemCount.css"
 
 
