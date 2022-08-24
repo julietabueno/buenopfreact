@@ -1,0 +1,23 @@
+.classContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.095);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 50px 0 rgba(0, 0, 0, 0.37);
+    margin: 10px;
+    -webkit-backdrop-filter: blur(4px);
+    width: 500px;
+    height: 550px;
+}
+
+img {
+    border-radius: 50%;
+    width: 50%;
+
+
+}

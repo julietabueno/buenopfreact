@@ -1,6 +1,6 @@
 import React from 'react'
 import { Form } from './Form';
-import {CartWidget} from "../fragment/cartWidget/CartWidget"
+import {CartWidget} from "../cartWidget/CartWidget"
 export const NavBar = () => {
   return (
     <div id="" className="">

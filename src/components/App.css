@@ -1,4 +1,20 @@
-.titulos{
+.titulos {
     background-color: darkgoldenrod;
     color: black;
+}
+
+.btn {
+    background-color: rgba(0, 0, 0, 0.484);
+    padding: 10px 12px;
+    color: floralwhite;
+    margin: 2px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+
+}
+
+.ItemListContainer{
+    display: flex;
+    justify-content: space-around;
 }
