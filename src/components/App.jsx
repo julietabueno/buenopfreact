@@ -1,18 +1,15 @@
 import './App.css';
 import React from 'react';
 import { NavBar } from './navBar/NavBar';
-import { ItemListContainer } from './itemListContainer/ItemListContainer';
-
-
+import { ItemListContainer } from './ItemListContainer/ItemListContainer';
+import '../components/App.css';
 
 
 function App() {
   return (
     <div>
       <NavBar />
-      <div className='ItemListContainer'>
-        <ItemListContainer nickname="Batman" name="Bruce" lastname="Wayne" city="Ciudad Gotica" />
-      </div>
+      <ItemListContainer />
     </div>
   );
 }
