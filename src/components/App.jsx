@@ -7,10 +7,14 @@ import { ItemDetailContainer } from './ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
-    <div>
+    <div className='app'>
       <NavBar />
-      <ItemListContainer />
-      <ItemDetailContainer />
+      <div className='appListContainer'>
+        <ItemListContainer />
+        </div>
+        <div className='appDetailContainer'>
+        <ItemDetailContainer />
+      </div>
     </div>
   );
 }

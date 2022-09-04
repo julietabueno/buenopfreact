@@ -29,6 +29,8 @@
 
 .cardDetail2 {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    
+
 }

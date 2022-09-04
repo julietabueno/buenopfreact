@@ -17,7 +17,7 @@ export const ItemListContainer = () => {
     }, [])
 
     return (
-        <ItemList productList={productList} />
+        <ItemList className="divListContainer" productList={productList} />
     )
 }
 
