@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { ItemList } from './ItemList';
-import { Loader } from '../Gif/Loader';
 import { products } from '../products/Products'
 import './ItemListContainer.css';
 
