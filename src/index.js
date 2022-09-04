@@ -5,7 +5,7 @@ import App from './components/App.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App nombre="Julieta" />
-  </React.StrictMode>
+
+  <App nombre="Julieta" />
+
 );

@@ -1,11 +1,11 @@
 import React from 'react'
-import { useItemCount } from '../../hooks/useItemCount'
-
+import { useItemCount } from '../../hooks/UseItemCount'
 import "./ItemCount.css"
 
 
 export const ItemCountHook = ({ stock, onAdd }) => {
     const { add, substract, count } = useItemCount(stock)
+    
     return (
         < div className='itemCount'>
             <div className='itemCountBox'>
