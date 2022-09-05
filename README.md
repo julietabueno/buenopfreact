@@ -1,3 +1,18 @@
+Title: 
+BuenoPfReact
+
+Introduction: 
+La App se trata de un e-commerce de la marca Lego. con la posibilidad de compra de productos nuevos y/o usados.
+
+Features:
+- Buscador por input
+- Navegacion por navbar
+- Carrito de compras
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

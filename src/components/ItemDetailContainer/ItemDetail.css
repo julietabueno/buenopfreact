@@ -11,8 +11,8 @@
     box-shadow: 0 8px 50px 0 rgba(0, 0, 0, 0.37);
     margin: 10px;
     -webkit-backdrop-filter: blur(4px);
-    width: 500px;
-    height: 500px;
+    width: 800px;
+    height: 800px;
 }
 
 .imgLego {
@@ -31,6 +31,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+}
 
+.description {
+    margin: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: justify;
+}
+
+.coleccion {
+    text-transform: uppercase;
+}
+
+.imglogo {
+    width: 100px;
+    border-radius: 50%;
+    padding: 10%;
 }

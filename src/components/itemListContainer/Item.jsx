@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 import './ItemListContainer.css'
 import { Link } from 'react-router-dom'
 
-export const Item = ({ id, name, lastname, nickname, city, profesion, image, price, description, category, stock }) => {
+export const Item = ({ id, name, lastname, nickname, city, profesion, image, logo, price, description, category, stock }) => {
 
     function onAdd(count) {
         Swal.fire({
@@ -28,7 +28,7 @@ export const Item = ({ id, name, lastname, nickname, city, profesion, image, pri
                 <h5>Colección: {category}</h5>
                 {/*   <ItemCountHook stock={stock} initial={1} onAdd={onAdd} /> */}
                 <Link to={`/details/${id}`}>
-                    <button className='btn'>Ver mas info</button>
+                    <button className='btn'>Conocé más de {nickname}</button>
                 </Link>
             </div>
         </div>

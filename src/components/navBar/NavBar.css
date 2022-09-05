@@ -1,6 +1,12 @@
-
-
-.navbar{
-    background-image:url(https://i.pinimg.com/736x/43/5a/bc/435abc03d7f9a8b7b4ba4ee9c6abaaa1.jpg);
+.navbar {
+    background-image: url(https://i.pinimg.com/736x/43/5a/bc/435abc03d7f9a8b7b4ba4ee9c6abaaa1.jpg);
     width: 100%;
+}
+
+.imglogoNav {
+    width: 50px;
+}
+
+.imglogoNavLego {
+    width: 150px;
 }
