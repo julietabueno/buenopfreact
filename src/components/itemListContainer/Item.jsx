@@ -1,10 +1,10 @@
 import React from 'react'
-import { ItemCountHook } from '../ItemCount/ItemCountHook'
+/* import { ItemCountHook } from '../ItemCount/ItemCountHook' */
 import Swal from 'sweetalert2'
 import './ItemListContainer.css'
+import { Link } from 'react-router-dom'
 
-
-export const Item = ({ id, name, lastname, nickname, city, category, image, price, description, colection, stock }) => {
+export const Item = ({ id, name, lastname, nickname, city, profesion, image, price, description, category, stock }) => {
 
     function onAdd(count) {
         Swal.fire({
@@ -24,8 +24,12 @@ export const Item = ({ id, name, lastname, nickname, city, category, image, pric
                 <h2>Vivo en {city}</h2>
                 <img className='imgLego' src={image} alt={nickname} />
                 <h3>Nombre de pila: {name} {lastname}</h3>
-                <h4>Profesión: {category}</h4>
-                <ItemCountHook stock={stock} initial={1} onAdd={onAdd} />
+                <h4>Profesión: {profesion}</h4>
+                <h5>Colección: {category}</h5>
+                {/*   <ItemCountHook stock={stock} initial={1} onAdd={onAdd} /> */}
+                <Link to={`/details/${id}`}>
+                    <button className='btn'>Ver mas info</button>
+                </Link>
             </div>
         </div>
     )
