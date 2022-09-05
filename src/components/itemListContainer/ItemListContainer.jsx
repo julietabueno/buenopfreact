@@ -3,6 +3,7 @@ import { ItemList } from './ItemList';
 import { products } from '../products/Products'
 import './ItemListContainer.css';
 import { useParams } from 'react-router-dom';
+import { Loader } from '../Gif/Loader'
 
 
 export const ItemListContainer = () => {
@@ -16,7 +17,6 @@ export const ItemListContainer = () => {
             setTimeout(() => res(products.filter(item => item.category === categoria)), 2000)
         } else {
             setTimeout(() => res(products), 2000)
-
         }
     })
 
@@ -25,10 +25,17 @@ export const ItemListContainer = () => {
         getProducts()
             .then(products => setProductList(products))
             .catch(error => console.error(error))
+            return () =>{
+                setProductList([])
+            }
     }, [categoria])
 
     return (
-        <ItemList className="divListContainer" productList={productList} />
+        <>
+            {
+                productList.length ? < ItemList className="divListContainer" productList={productList} /> : <Loader />
+            }
+        </>
     )
 }
 
