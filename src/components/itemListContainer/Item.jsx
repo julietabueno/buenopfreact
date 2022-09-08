@@ -1,5 +1,4 @@
 import React from 'react'
-/* import { ItemCountHook } from '../ItemCount/ItemCountHook' */
 import Swal from 'sweetalert2'
 import './ItemListContainer.css'
 import { Link } from 'react-router-dom'
@@ -26,7 +25,6 @@ export const Item = ({ id, name, lastname, nickname, city, profesion, image, log
                 <h3>Nombre de pila: {name} {lastname}</h3>
                 <h4>Profesión: {profesion}</h4>
                 <h5>Colección: {category}</h5>
-                {/*   <ItemCountHook stock={stock} initial={1} onAdd={onAdd} /> */}
                 <Link to={`/details/${id}`}>
                     <button className='btn'>Conocé más de {nickname}</button>
                 </Link>

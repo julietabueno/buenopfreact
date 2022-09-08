@@ -1,10 +1,16 @@
-import React from 'react'
-import { ItemCountHook } from '../ItemCount/ItemCountHook'
+import React, { useState } from 'react'
+import { ItemCount } from '../ItemCount/ItemCount'
 import Swal from 'sweetalert2'
 import './ItemDetail.css'
+import { Link } from 'react-router-dom'
 
 export const ItemDetail = ({ item }) => {
+    const [agregarCarrito, setAgregarCarrito] = useState(true);
+    const onAdd = () => {
+        setAgregarCarrito(true);
+    };
 
+    /*
     const onAdd = (count) => {
         Swal.fire({
             title: 'Felicitaciones!',
@@ -14,7 +20,7 @@ export const ItemDetail = ({ item }) => {
             imageHeight: 200,
             imageAlt: 'Custom image',
         })
-    }
+    } */
     return (
         <div className='DetailContainer' key={item.id}>
             <div className='cardDetail'>
@@ -29,7 +35,13 @@ export const ItemDetail = ({ item }) => {
                         <img className='imglogo' src={item.logo} alt={item.category} />
                     </div>
                 </div>
-                <ItemCountHook stock={item.stock} initial={1} onAdd={onAdd} />
+
+                {agregarCarrito ? (<Link to="/cart" className="btn btn-lg btn-success mt-2" type="button">
+                    Finalizar compra
+                </Link>
+                ) : <ItemCount stock={item.stock} onAdd={onAdd} />
+                }
+
             </div>
         </div>
     )
