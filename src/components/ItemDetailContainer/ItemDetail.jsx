@@ -5,7 +5,7 @@ import './ItemDetail.css'
 import { Link } from 'react-router-dom'
 
 export const ItemDetail = ({ item }) => {
-    const [agregarCarrito, setAgregarCarrito] = useState(true);
+    const [agregarCarrito, setAgregarCarrito] = useState(false);
     const onAdd = () => {
         setAgregarCarrito(true);
     };
