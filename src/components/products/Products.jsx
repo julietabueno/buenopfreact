@@ -11,7 +11,7 @@ export const products = [
         profesion: "Súper Héroe",
         image: '/assets/Batman.png',
         price: 6,
-        description: "Descripción: ¡Crash! ¡Broom! ¡Miau! Siempre que Gatúbela está a punto de completar su último plan perfecto, Batman contesta a la llamada de la justicia, llega rápidamente en su batimóvil Mighty Micros personalizado y persigue a la felina criminal por los laberínticos callejones de Ciudad Gótica. No se rendirá hasta que la atrape y recupere el valioso tesoro que ha robado, pero a Gatúbela le gusta demostrar que es más rápida e inteligente que el Caballero de la Noche… ¡a menos que él la distraiga con un sabroso plato de leche!",
+        description: "¡Crash! ¡Broom! ¡Miau! Siempre que Gatúbela está a punto de completar su último plan perfecto, Batman contesta a la llamada de la justicia, llega rápidamente en su batimóvil Mighty Micros personalizado y persigue a la felina criminal por los laberínticos callejones de Ciudad Gótica. No se rendirá hasta que la atrape y recupere el valioso tesoro que ha robado, pero a Gatúbela le gusta demostrar que es más rápida e inteligente que el Caballero de la Noche… ¡a menos que él la distraiga con un sabroso plato de leche!",
         category: "dc",
         logo: '/assets/LogoDc.webp',
         stock: 20

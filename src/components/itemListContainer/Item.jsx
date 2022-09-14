@@ -32,6 +32,3 @@ export const Item = ({ id, name, lastname, nickname, city, profesion, image, log
         </div>
     )
 }
-
-
-

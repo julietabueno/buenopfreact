@@ -1,17 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { ItemCount } from '../ItemCount/ItemCount'
 import Swal from 'sweetalert2'
 import './ItemDetail.css'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../../hooks/CartContext'
+
 
 export const ItemDetail = ({ item }) => {
-    const [agregarCarrito, setAgregarCarrito] = useState(false);
-    const onAdd = () => {
-        setAgregarCarrito(true);
-    };
 
-    /*
+    //Aca se setea si el user hace la compra o no. Traigo la funcion del context
+    const {addToCart} = useContext(CartContext);
+
+    //indico si el usuario realizo la compra
+    const [purchaseMade, setPurchaseMade] = useState(false);
+
+    //recibo de itemCount la cantidad y de la paso a la funcion addToCart
     const onAdd = (count) => {
+        //recibo la info del itemCounty la se la paso a addToCart
+        setPurchaseMade(true);
+        addToCart(item,count);
         Swal.fire({
             title: 'Felicitaciones!',
             text: `Agregaste ${count} ${item.nickname} al carrito: ${item.name} ${item.lastname}`,
@@ -20,7 +27,9 @@ export const ItemDetail = ({ item }) => {
             imageHeight: 200,
             imageAlt: 'Custom image',
         })
-    } */
+
+    };
+
     return (
         <div className='DetailContainer' key={item.id}>
             <div className='cardDetail'>
@@ -36,8 +45,8 @@ export const ItemDetail = ({ item }) => {
                     </div>
                 </div>
 
-                {agregarCarrito ? (<Link to="/cart" className="btn btn-lg btn-success mt-2" type="button">
-                    Finalizar compra
+                {purchaseMade ? (<Link to="/Cart" className="btn " type="button">
+                    Ir a mi carrito
                 </Link>
                 ) : <ItemCount stock={item.stock} onAdd={onAdd} />
                 }

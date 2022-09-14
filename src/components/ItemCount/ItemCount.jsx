@@ -1,6 +1,7 @@
-import React from 'react'
+import React,{useContext,useEffect,useState} from 'react'
 import { useItemCount } from '../../hooks/UseItemCount'
 import "./ItemCount.css"
+
 
 
 export const ItemCount = ({ stock, onAdd }) => {
@@ -24,4 +25,3 @@ export const ItemCount = ({ stock, onAdd }) => {
         </ div>
     )
 }
-
