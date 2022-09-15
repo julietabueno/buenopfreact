@@ -2,10 +2,11 @@ import React, { useContext } from "react";
 import Swal from "sweetalert2";
 import { CartContext } from "../../hooks/CartContext";
 
-export const Order = ({ getTotal }) => {
+export const Order = ({ getTotal , getQuantity}) => {
+   
 
     const confirm = () => {
-        Swal.fire("Muchas Gracias", `Compraste tus LEGO`, "success");
+        Swal.fire("Muchas Gracias", `Compraste ${getQuantity()} LEGO`, "success");
     };
 
     return (
@@ -40,6 +41,7 @@ export const Order = ({ getTotal }) => {
                     <div className="col-2 d-flex align-items-center">
                         <div className="card-body">
                             <p className="fs-4">Total:</p>
+                            <p className="fs-4">{getQuantity()} LEGOS</p>
                             <p className="fs-3">u$s{getTotal()}</p>
                             <button onClick={confirm} className="btn btn-outline-primary">
                                 Comprar
