@@ -3,7 +3,6 @@ import { useItemCount } from '../../hooks/UseItemCount'
 import "./ItemCount.css"
 
 
-
 export const ItemCount = ({ stock, onAdd }) => {
     const { add, substract, count } = useItemCount(stock)
 
