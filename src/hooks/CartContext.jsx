@@ -1,9 +1,9 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useContext } from 'react';
 
-export const CartContext = createContext({});
+export const CartContext = createContext();
 
 //extraigo el provider del cart context para pasar por props lo que voy a usar del contexto
-const { Provider } = CartContext
+const { Provider } = CartContext 
 
 /* Ejemplo de mi carrito
 
