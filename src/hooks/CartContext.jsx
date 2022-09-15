@@ -3,102 +3,47 @@ import React, { createContext, useState, useContext } from 'react';
 export const CartContext = createContext();
 
 //extraigo el provider del cart context para pasar por props lo que voy a usar del contexto
-const { Provider } = CartContext 
-
-/* Ejemplo de mi carrito
-
-const Cart =[
-    {
-        item:  {
-            nombre: "Spiderman",
-            precio: "u$s8" ,
-            id: id
-        },
-        quantity: 6
-    },
-    {
-        item:  {
-            nombre: "Spiderman",
-            precio: "u$s8" ,
-        },
-        quantity: 6
-    },
-    {
-        item:  {
-            nombre: "Spiderman",
-            precio: "u$s8" ,
-        },
-        quantity: 6
-    },
-    */
+const { Provider } = CartContext
 
 export const CartProvider = ({ defaultValue = [], children }) => {
     const [cart, setCart] = useState(defaultValue);
 
 
     //creo la fn para vaciar el carrito
-    const clearCart = () => {
-        setCart([]);
-    }
+    const clearCart = () => setCart([]);
 
     //creo la fn para agregar al carrito
     const addToCart = (item, quantity) => {
-        console.log(item)
         //chequeo si el item ya esta en el carrito para sumarle la cantidad si esta y si no, agregarlo
         if (isInCart(item.id)) {
-            const newCart = [...cart] //creo la copia del carrito para poder buscar e identificar el producto que quiero sumarle la cantidad
-            for (const element of newCart) {
-                if (element.item.id === item.id) {
-                    element.quantity = element.quantity + quantity;
-                }
-            }
-            setCart(newCart);
+            setCart(cart.map(product => {
+                return product.id === item.id ? { ...product, quantity: product.quantity + quantity } : product
+            }));
         } else {
-            setCart(
-                [
-                    ...cart,
-                    {
-                        item: item,
-                        quantity: quantity
-                    }
-                ]
-            )
+            setCart([...cart, { ...item, quantity }]) //Si no está el item lo agrego y le sumo el campo quantity
         }
     };
 
     //creo la fn para saber si esta o no en el carrito
-    const isInCart = (id) => {
-        return cart.find((element) => element.item.id === id);
-    };
+    const isInCart = (id) => cart.find(product => product.id === id) ? true : false;
 
     //creo la fn para elimiar elementos del carrito
-    const removeFromCart = (id) => {
-        const newCart = [...cart].filter(element => element.item.id !== id);
-        setCart(newCart);
-    }
+    const removeFromCart = (id) => setCart(cart.filter(product => product.id !== id));
 
-    /* const getQuantity = () => {
-        let cantidad = 0
-        cart.forEach((element) => cantidad = cantidad + element.quantity)
-        return cantidad
-    }
+    const getQuantity = () => cart.reduce((collector, product) => collector + product.quantity, 0);
 
     const getTotal = () => {
-        let total = 0
-        cart.forEach((element) => {
-            total = total + (element.quantity * element.item.price)
-        })
-        return total
-    } */
-    
+        return cart.reduce((prev, act) => prev + act.quantity * act.price, 0)
+    }
+
     //exporto al contexto con todas las funciones que voy a utilizar para agregar, eliminar, vaciar y chequear si esta en el carrito
     const context = {
         cart,
         clearCart,
         addToCart,
-        removeFromCart
-        /*        getQuantity,
-            getTotal */
+        removeFromCart,
+        getQuantity,
+        getTotal
     }
 
 

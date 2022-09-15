@@ -4,28 +4,30 @@ import "./App.css";
 import { NavBar } from './navBar/NavBar';
 import { ItemListContainer } from './ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from './ItemDetailContainer/ItemDetailContainer';
-import { CartView } from './CartView/CartView';
+import { Cart } from './Cart/Cart';
 import { CartProvider } from "../hooks/CartContext"
 import { Footer } from './footer/Footer';
-
+/* import Searcher from "./components/navbar/Searcher";
+import { Carroussel } from "./components/Carroussel/Carroussel";*/
 
 
 function App() {
   return (
-    <CartProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <CartProvider>
         <div className='app'>
+
           <NavBar />
           <Routes>
             <Route path='/' element={<div className='appListContainer'><ItemListContainer /></div>} />
             <Route path='/categoria/:categoria' element={<div className='appListContainer'><ItemListContainer /></div>} />
             <Route path='/details/:id' element={<div className='appDetailContainer'><ItemDetailContainer /></div>} />
-            <Route path="/cart" element={<CartView />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
           <Footer />
         </div>
-      </BrowserRouter>
-    </CartProvider>
+      </CartProvider>
+    </BrowserRouter>
 
   );
 }

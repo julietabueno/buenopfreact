@@ -3,7 +3,7 @@ import { ItemList } from './ItemList';
 import { products } from '../products/Products'
 import './ItemListContainer.css';
 import { useParams } from 'react-router-dom';
-import { Loader } from '../Gif/Loader'
+import { Loader } from '../Loader/Loader'
 
 
 export const ItemListContainer = () => {

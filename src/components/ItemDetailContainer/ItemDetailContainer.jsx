@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { Loader } from '../Gif/Loader'
+import { Loader } from '../Loader/Loader'
 import { products } from '../products/Products'
 import { ItemDetail } from './ItemDetail.jsx'
 
