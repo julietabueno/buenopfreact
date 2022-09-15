@@ -1,0 +1,9 @@
+.brandsFooter{
+    display: flex;
+    align-items: center;
+}
+
+.fa-brands{
+    width: 50px;
+    margin-top: 10px;
+}

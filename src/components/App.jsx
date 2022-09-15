@@ -6,6 +6,7 @@ import { ItemListContainer } from './ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from './ItemDetailContainer/ItemDetailContainer';
 import { CartView } from './CartView/CartView';
 import { CartProvider } from "../hooks/CartContext"
+import { Footer } from './footer/Footer';
 
 
 
@@ -21,7 +22,7 @@ function App() {
             <Route path='/details/:id' element={<div className='appDetailContainer'><ItemDetailContainer /></div>} />
             <Route path="/cart" element={<CartView />} />
           </Routes>
-          <NavBar />
+          <Footer />
         </div>
       </BrowserRouter>
     </CartProvider>
