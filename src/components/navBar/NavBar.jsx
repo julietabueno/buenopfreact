@@ -1,8 +1,8 @@
 import React, {useContext}  from 'react'
 import { Form } from './Form';
-import { CartWidget } from "../cartWidget/CartWidget"
 import "./NavBar.css"
 import { Link } from 'react-router-dom';
+import { CartWidget } from '../cartWidget/CartWidget';
 
 export const NavBar = () => {
   return (
