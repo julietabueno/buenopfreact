@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 
 export const Item = ({ id, name, lastname, nickname, city, profesion, image, logo, price, description, category, stock }) => {
 
+    
     function onAdd(count) {
         Swal.fire({
             title: 'Listo!',

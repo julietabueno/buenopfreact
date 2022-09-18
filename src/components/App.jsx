@@ -7,8 +7,7 @@ import { ItemDetailContainer } from './ItemDetailContainer/ItemDetailContainer';
 import { Cart } from './Cart/Cart';
 import { CartProvider } from "../hooks/CartContext"
 import { Footer } from './footer/Footer';
-/* import Searcher from "./components/navbar/Searcher";
-import { Carroussel } from "./components/Carroussel/Carroussel";*/
+
 
 
 function App() {

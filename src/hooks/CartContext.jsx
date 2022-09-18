@@ -12,6 +12,7 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     //creo la fn para vaciar el carrito
     const clearCart = () => setCart([]);
 
+    
     //creo la fn para agregar al carrito
     const addToCart = (item, quantity) => {
         //chequeo si el item ya esta en el carrito para sumarle la cantidad si esta y si no, agregarlo

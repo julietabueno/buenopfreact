@@ -1,10 +1,10 @@
-import React, {useContext}  from 'react'
+import React  from 'react'
 import '../ItemListContainer/ItemListContainer.css'
 import { Item } from '../ItemListContainer/Item'
 
 
 export const ItemList = ({ productList }) => {
-
+console.log(productList)
     return (
         <>
             {productList.map(item =>
