@@ -6,3 +6,11 @@
     color: rgba(245, 245, 28, 0.884);
     font-size: xx-large;
 }
+
+.carrito:hover {
+    filter: drop-shadow(3px 3px 10px #4091fb)
+}
+
+.nav-item .nav-link:hover {
+    color: rgb(248, 16, 16);
+}

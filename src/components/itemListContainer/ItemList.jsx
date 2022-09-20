@@ -4,7 +4,7 @@ import { Item } from '../ItemListContainer/Item'
 
 
 export const ItemList = ({ productList }) => {
-console.log(productList)
+
     return (
         <>
             {productList.map(item =>

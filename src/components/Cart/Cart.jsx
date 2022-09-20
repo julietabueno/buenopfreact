@@ -7,9 +7,7 @@ import { ItemCart } from './ItemCart'
 
 export const Cart = ({item}) => {
     const { cart, getTotal, getQuantity } = useContext(CartContext);
-    /* const [empty, setEmpty] = useState(true);
-    const [showOrder, setShowOrder] = useState(true);
- */
+    console.log(item)
     if (cart.length === 0) {
         return (
             <>
@@ -27,7 +25,7 @@ export const Cart = ({item}) => {
     }
     return (
         <>
-       { console.log(cart)}
+        {console.log(cart)}
             {cart.map((item) => (
                 <ItemCart key={item.id} item={item} />
             ))}

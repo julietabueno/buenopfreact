@@ -5,6 +5,7 @@ import { CartContext } from '../../hooks/CartContext'
 
 export const ItemCart = ({ item }) => {
     const { removeFromCart } = useContext(CartContext);
+    console.log({item})
     return (
         <>
         <div className='container-fluid'>
