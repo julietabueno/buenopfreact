@@ -1,14 +1,11 @@
 import React, { useContext } from "react";
-import Swal from "sweetalert2";
-import { CartContext } from "../../hooks/CartContext";
+import { Link } from "react-router-dom";
+import { CartContext } from '../../hooks/CartContext'
 
-export const Order = ({ getTotal , getQuantity}) => {
-   
 
-    const confirm = () => {
-        Swal.fire("Muchas Gracias", `Compraste ${getQuantity()} LEGO`, "success");
-    };
-
+export const Order = () => {
+    const { getTotal, getQuantity, clearCart } = useContext(CartContext);
+ 
     return (
         <div className="container-fluid">
             <div className="card mb-3">
@@ -43,9 +40,13 @@ export const Order = ({ getTotal , getQuantity}) => {
                             <p className="fs-4">Total:</p>
                             <p className="fs-4">{getQuantity()} LEGOS</p>
                             <p className="fs-3">u$s{getTotal()}</p>
-                            <button onClick={confirm} className="btn btn-outline-primary">
-                                Comprar
-                            </button>
+                            <Link to='/Checkout'>
+                                <button className="btn btn-outline-primary">
+                                    Finalizar compra
+                                </button>
+                            </Link>
+
+                            <button className="btn btn-danger" onClick={clearCart}>Vaciar Carrito</button>
                         </div>
                     </div>
                 </div>

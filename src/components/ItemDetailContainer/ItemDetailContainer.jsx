@@ -12,11 +12,14 @@ export const ItemDetailContainer = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        const querydb = getFirestore();
-        const queryDoc = doc(querydb, "productos", id);
-        getDoc(queryDoc)
-        
-            .then(res => setItem({id:res.id,...res.data()}))
+        try {
+            const querydb = getFirestore();
+            const queryDoc = doc(querydb, "productos", id);
+            getDoc(queryDoc)
+                .then(res => setItem({ id: res.id, ...res.data() }))
+        } catch (error) {
+            console.log(error)
+        }
     }, [id])
 
     return (

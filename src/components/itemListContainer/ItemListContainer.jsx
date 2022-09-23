@@ -11,20 +11,24 @@ export const ItemListContainer = () => {
     const [productList, setProductList] = useState([]);
     const { categoria } = useParams()
 
+
+    /* Traigo la info de los productos de Firebase con el ID automatico */
     useEffect(() => {
-        const querydb = getFirestore();
-        const queryCollection = collection(querydb, "productos");
-        console.log(getDocs(queryCollection))
+        try {
+            const querydb = getFirestore();
+            const queryCollection = collection(querydb, "productos");
 
-        if (categoria) {
-            const queryFilter = query(queryCollection, where('category', "==", categoria))
-            getDocs(queryFilter)
-                .then(res => setProductList(res.docs.map(item => ({ id: item.id, ...item.data() }))))
-        } else {
-            getDocs(queryCollection)
-                .then(res => setProductList(res.docs.map(item => ({ id: item.id, ...item.data() }))))
+            if (categoria) {
+                const queryFilter = query(queryCollection, where('category', "==", categoria))
+                getDocs(queryFilter)
+                    .then(res => setProductList(res.docs.map(item => ({ id: item.id, ...item.data() }))))
+            } else {
+                getDocs(queryCollection)
+                    .then(res => setProductList(res.docs.map(item => ({ id: item.id, ...item.data() }))))
+            }
+        } catch (error) {
+            console.log(error)
         }
-
     }, [categoria])
 
     return (
@@ -35,32 +39,3 @@ export const ItemListContainer = () => {
         </>
     )
 }
-
-
-/*     const getProducts = () => new Promise((res, rej) => {
-        if (categoria) {
-            setTimeout(() => res(products.filter(item => item.category === categoria)), 2000)
-        } else {
-            setTimeout(() => res(products), 2000)
-        }
-    })
-
-
-    useEffect(() => {
-        getProducts()
-            .then(products => setProductList(products))
-            .catch(error => console.error(error))
-            return () =>{
-                setProductList([])
-            }
-    }, [categoria])
-
-    return (
-        <>
-            {
-                productList.length ? < ItemList className="divListContainer" productList={productList} /> : <Loader />
-            }
-        </>
-    )
-}
- */

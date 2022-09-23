@@ -1,0 +1,30 @@
+
+.cardFInal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardTitleH5{
+    color: black;
+    font-size: xx-large;
+}
+
+.cardtextH5{
+    color: black;
+    font-size: x-large;
+}
+
+.linkOtraCompra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.h5Compra{
+font-size: large;
+color: antiquewhite;
+text-decoration: none;
+}

@@ -7,6 +7,7 @@ import { ItemDetailContainer } from './ItemDetailContainer/ItemDetailContainer';
 import { Cart } from './Cart/Cart';
 import { CartProvider } from "../hooks/CartContext"
 import { Footer } from './footer/Footer';
+import { Checkout } from './Cart/Checkout';
 
 
 
@@ -22,6 +23,7 @@ function App() {
             <Route path='/categoria/:categoria' element={<div className='appListContainer'><ItemListContainer /></div>} />
             <Route path='/details/:id' element={<div className='appDetailContainer'><ItemDetailContainer /></div>} />
             <Route path="/cart" element={<Cart />} />
+            <Route path='/checkout' element={<Checkout />} />
           </Routes>
           <Footer />
         </div>

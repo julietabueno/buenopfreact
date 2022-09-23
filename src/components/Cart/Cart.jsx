@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 import { CartContext } from '../../hooks/CartContext'
 import { Order } from './Order'
 import { ItemCart } from './ItemCart'
-
+import './Cart.css'
 
 export const Cart = ({item}) => {
-    const { cart, getTotal, getQuantity } = useContext(CartContext);
-    console.log(item)
+    const { cart, getTotal, getQuantity , clearCart} = useContext(CartContext);
+    console.log(cart)
     if (cart.length === 0) {
         return (
             <>
@@ -24,13 +24,13 @@ export const Cart = ({item}) => {
 
     }
     return (
-        <>
-        {console.log(cart)}
+        <div className='container-fluid'>
             {cart.map((item) => (
                 <ItemCart key={item.id} item={item} />
             ))}
             <Order getTotal={getTotal} getQuantity={getQuantity}/>
-        </>
+          
+        </div>
     );
 };
 

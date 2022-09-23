@@ -3,8 +3,15 @@
 .carrito{
     margin: 1%;
     padding-right: 10px;
-    color: rgba(245, 245, 28, 0.884);
-    font-size: xx-large;
+    color: rgba(255, 255, 0, 0.987);
+    font-size: large;
+}
+
+.btn-cart{
+    color:antiquewhite;
+    border: 'none';
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .carrito:hover {

@@ -40,9 +40,10 @@ export const CartProvider = ({ defaultValue = [], children }) => {
         cart,
         clearCart,
         addToCart,
+        isInCart,
         removeFromCart,
         getQuantity,
-        getTotal
+        getTotal,
     }
 
 

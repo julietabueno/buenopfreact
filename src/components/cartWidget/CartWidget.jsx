@@ -9,13 +9,14 @@ export const CartWidget = () => {
 
   return (
     <>
-      <li className={`nav-item ${cart.length === 0 ? "d-none" : "d-block"}`}>
-        <Link className="navbar-brand carrito" to="../cart">
-          <img src="/assets/carrito.png" className="carrito" alt="carrito" width="40px" />
-          <span>{getQuantity()}</span>
+      {
+        <Link to={"/cart"} className="carrito" >
+          <img src="/assets/carrito.png" alt="cart" width={32} height={32} />
+          {
+            getQuantity() > 0 && <button className="btn-cart">{getQuantity()}</button>
+          }
         </Link>
-        
-      </li>
+        }
     </>
   );
 };
