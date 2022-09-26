@@ -6,7 +6,7 @@ import { ItemCart } from './ItemCart'
 import './Cart.css'
 
 export const Cart = ({item}) => {
-    const { cart, getTotal, getQuantity , clearCart} = useContext(CartContext);
+    const { cart, getTotal, getQuantity } = useContext(CartContext);
     console.log(cart)
     if (cart.length === 0) {
         return (

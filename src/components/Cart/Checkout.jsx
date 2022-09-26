@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from '../../hooks/CartContext'
-import { collection, addDoc } from 'firebase/firestore'
+import { collection, addDoc, updateDoc, doc } from 'firebase/firestore'
 import db from '../../firebase/config'
 import { Loader } from "../Loader/Loader";
 import Swal from "sweetalert2";
@@ -14,10 +14,9 @@ export const Checkout = () => {
     const confirm = () => {
         Swal.fire("Muchas Gracias", `Su compra ha sido realizada con éxito`, `Su nº de órden es: ${orderID}`, "success");
     };
+
     const [load, setLoad] = useState(false)
     const [orderID, setOrderID] = useState()
-
-
 
     const [buyer, setBuyer] = useState({
         Nombre: '',
@@ -42,9 +41,22 @@ export const Checkout = () => {
             setOrderID(order.id)
             clearCart()
             setLoad(false)
+            updateStock()
         } catch (error) {
             console.log(error)
         }
+    }
+
+    /* creo la funcion para actualizar el stock una vez que realizo la compra */
+    const updateStock = (item) => { 
+        cart.forEach(item => {
+            console.log(item)
+            const docRef = doc(db, 'productos', item.id)
+            const updateStock = item.stock - item.quantity;
+            updateDoc(docRef, {
+                stock: updateStock
+            })
+        })
     }
 
     const handleSubmit = (e) => {
