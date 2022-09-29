@@ -1,19 +1,13 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { CartContext } from '../../hooks/CartContext'
+import { CartContext } from '../../Hooks/CartContext'
 import { collection, addDoc, updateDoc, doc } from 'firebase/firestore'
-import db from '../../firebase/config'
+import db from '../../Firebase/Config'
 import { Loader } from "../Loader/Loader";
-import Swal from "sweetalert2";
 import './Cart.css'
 
 export const Checkout = () => {
-    const { cart, getTotal, clearCart, getQuantity } = useContext(CartContext)
-
-    /* Agrego un modal para la confirmacion de compra */
-    const confirm = () => {
-        Swal.fire("Muchas Gracias", `Su compra ha sido realizada con éxito`, `Su nº de órden es: ${orderID}`, "success");
-    };
+    const { cart, getTotal, clearCart } = useContext(CartContext)
 
     const [load, setLoad] = useState(false)
     const [orderID, setOrderID] = useState()
@@ -48,7 +42,7 @@ export const Checkout = () => {
     }
 
     /* creo la funcion para actualizar el stock una vez que realizo la compra */
-    const updateStock = (item) => { 
+    const updateStock = (item) => {
         cart.forEach(item => {
             console.log(item)
             const docRef = doc(db, 'productos', item.id)
@@ -78,50 +72,35 @@ export const Checkout = () => {
 
             {load ? <Loader />
                 : (!orderID && <div>
-                    <h4>Por favor, complete sus datos:</h4>
+                    <h4 className="textCheckout">Por favor, complete sus datos:</h4>
+                    <form onSubmit={handleSubmit} className="row g-1 needs-validation" noValidate>
+                        <div className="col-md-7 position-relative">
+                            <label htmlFor="validationTooltip01" className="form-label textCheckout">Nombre y Apellido</label>
+                            <input type="text" className="form-control" name="Nombre" placeholder="Nombre" value={Nombre}
+                                onChange={handleInputChange} aria-label="Username" aria-describedby="addon-wrapping" />
 
-                    <form onSubmit={handleSubmit}>
+                        </div>
+                        <div className="col-md-7 position-relative">
+                            <label htmlFor="validationTooltip02" className="form-label textCheckout">Telefono</label>
+                            <input type="number" className="form-control" name="Telefono" placeholder="Telefono" value={Telefono}
+                                onChange={handleInputChange} aria-label="Username" aria-describedby="addon-wrapping" />
 
-                        <div className="row mb-3">
-                            <label htmlFor="Nombre" className="col-sm-2 col-form-label">Nombre</label>
-                            <div className="col-sm-10">
-                                <input type="text"
-                                    name="Nombre"
-                                    placeholder="Nombre"
-                                    value={Nombre}
-                                    onChange={handleInputChange}
-                                    required />
+                        </div>
+                        <div className="col-md-7 position-relative">
+                            <label htmlFor="validationTooltipUsername" className="form-label textCheckout">E-mail</label>
+                            <div className="input-group has-validation">
+                                <span className="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                                <input type="email" className="form-control" name="Email" placeholder="Email" value={Email}
+                                    onChange={handleInputChange} aria-label="Username" aria-describedby="addon-wrapping" />
                             </div>
                         </div>
-                        <div className="row mb-3">
-                            <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
-                            <div className="col-sm-10">
-                                <input
-                                    type="email"
-                                    name="Email"
-                                    placeholder="Email"
-                                    value={Email}
-                                    onChange={handleInputChange}
-                                    required
-                                />
-                            </div>
+                        <div className="col-md-7 position-relative">
+                            <input
+                                type="submit"
+                                value="Finalizar Compra"
+                                className="btn btnCheckout"
+                            />
                         </div>
-                        <div className="row mb-3">
-                            <label htmlFor="inputPhone3" className="col-sm-2 col-form-label">Telefono</label>
-                            <div className="col-sm-10">
-                                <input type="number"
-                                    name="Telefono"
-                                    placeholder="Telefono"
-                                    value={Telefono}
-                                    onChange={handleInputChange}
-                                    required />
-                            </div>
-                        </div>
-                        <input
-                            type="submit"
-                            value="Finalizar Compra"
-                            className="btn btn-success"
-                        />
                     </form>
 
 
@@ -131,18 +110,18 @@ export const Checkout = () => {
             <div>
                 {
                     orderID && (
-                        <div>
-                            <div className="card text-bg-dark">
-                                <img src="https://firebasestorage.googleapis.com/v0/b/lego-app-e4d06.appspot.com/o/bgLego.jpeg?alt=media&token=bf7a9afe-907b-47ac-92e9-2737d7e61e35" className="card-img" alt="..." />
-                                <div className="card-img-overlay cardFInal">
-                                    <h5 className="card-title cardTitleH5">Compra Finalizada con Exito</h5>
-                                    <p className="card-text cardtextH5">{`Su nº de órden es: ${orderID}`}</p>
+
+                        <div className="bodyCheckout">
+                            <div className="card cardChechout" style={{ width: '30rem' }}>
+                                <div className="card-body">
+                                    <h5 className="card-title">Compra Finalizada con Exito</h5>
+                                    <p className="card-text">{`Su nº de órden es: ${orderID}`}</p>
+                                    <Link to="/"><h5 className="card-link">Realizar otra compra</h5></Link>
 
                                 </div>
                             </div>
-                            <div className="linkOtraCompra">
-                                <Link to="/"><h5 className="h5Compra">Realizar otra compra</h5></Link>
-                            </div>
+
+
                         </div>
                     )
                 }

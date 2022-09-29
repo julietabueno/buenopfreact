@@ -1,8 +1,7 @@
-import React, {useContext}  from 'react'
-import { Form } from './Form';
+import React from 'react'
 import "./NavBar.css"
 import { Link } from 'react-router-dom';
-import { CartWidget } from '../cartWidget/CartWidget';
+import { CartWidget } from '../CartWidget/CartWidget';
 
 export const NavBar = () => {
   return (
@@ -15,27 +14,55 @@ export const NavBar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarColor01">
             <ul className="navbar-nav me-auto">
-              <Link to='/categoria/marvel'>
-                {<li className="nav-item">
-                  <a className="nav-link"><img className='imglogoNav' src="/assets/Logomarvel.png" alt="Logo marvel" /> </a>
-                </li>}
-              </Link>
-              <Link to='/categoria/dc'>
-                {<li className="nav-item">
-                  <a className="nav-link" ><img className='imglogoNav' src="/assets/LogoDc.webp" alt="Logo DC" /> </a>
-                </li>}
-              </Link>
-              <Link to='/categoria/disney'>
-                {<li className="nav-item">
-                  <a className="nav-link" ><img className='imglogoNav' src="/assets/LogoDisney.png" alt="Logo Disney" /> </a>
-                </li>}
-              </Link>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle filtroNavbar" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Filtrar por Marca
+                </a>
+                <ul className="dropdown-menu">
+                  <Link to='/categoria/marvel'>
+                    {<li className="nav-item">
+                      <a className="nav-link linksNavbar">Marvel</a>
+                    </li>}
+                  </Link>
+                  <Link to='/categoria/dc'>
+                    {<li className="nav-item">
+                      <a className="nav-link linksNavbar" >DC</a>
+                    </li>}
+                  </Link>
+                  <Link to='/categoria/disney'>
+                    {<li className="nav-item">
+                      <a className="nav-link linksNavbar" >Disney</a>
+                    </li>}
+                  </Link>
+                </ul>
+                &lt;
+              </li>
             </ul>
-            <Form contBuscar="Productos" />
-            <CartWidget />
+      
+              <nav>
+                <ul className="nav nav-fill">
+                  <Link to='/account'>
+                    <li className="nav-item">
+                      <a className="nav-link navlink" href="#">Mi cuenta</a>
+                    </li>
+                  </Link>
+                  <Link to='/contact'>
+                    <li className="nav-item">
+                      <a className="nav-link navlink">Contacto</a>
+                    </li>
+                  </Link>
+                </ul>
+              </nav>
+              <CartWidget />
+          
           </div>
         </div>
       </nav>
     </>
   )
 }
+
+
+
+
+

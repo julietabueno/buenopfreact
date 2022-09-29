@@ -1,30 +1,140 @@
+/* -------------Cart.jsx------------------ */
+.containerCarritoVacio {
+    margin: 10%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 
-.cardFInal{
+
+.cardCarritoVacio {
+    text-decoration: rgba(255, 255, 0, 0.987);
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+
+.cardCarritoVacio1 {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: rgba(255, 255, 0, 0.987);
+}
+
+.cardCarritoVacio2 {
+    color: white;
+}
+
+.cardCarritoVacio3 {
+    color: white;
+    font-size: x-large;
+}
+
+/* ItemCart */
+.itemCart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.itemDetailCart {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+}
+
+.orderDetail {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+}
+
+.imgCart {
+    margin: 10px;
+    padding-top: 2%;
+}
+
+.itemTrash {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 2%;
+    padding-right: 2%;
+}
+
+/* Order */
+/* .cardFInal {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.cardTitleH5{
+.cardTitleH5 {
     color: black;
     font-size: xx-large;
 }
 
-.cardtextH5{
+.cardtextH5 {
     color: black;
     font-size: x-large;
 }
 
-.linkOtraCompra{
+.linkOtraCompra {
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
 }
 
-.h5Compra{
-font-size: large;
-color: antiquewhite;
-text-decoration: none;
+.h5Compra {
+    font-size: large;
+    color: antiquewhite;
+    text-decoration: none;
+}
+ */
+
+.textCheckout {
+    color: rgba(255, 255, 0, 0.987);
+    font-size: large;
+    padding-top: 1%;
+
+}
+
+.btnCheckout {
+    background-color: rgba(255, 255, 0, 0.987);
+    color: black;
+}
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mPago {
+    width: 50%;
+}
+
+
+
+/* checkout */
+
+.bodyCheckout{
+    background-image:url(https://firebasestorage.googleapis.com/v0/b/lego-app-e4d06.appspot.com/o/bgLego.jpeg?alt=media&token=bf7a9afe-907b-47ac-92e9-2737d7e61e35);
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+
+.cardChechout{
+    margin-left: 30%;
+  
 }

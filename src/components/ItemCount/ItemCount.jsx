@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { useItemCount } from '../../hooks/UseItemCount'
+import React from 'react'
+import { useItemCount } from '../../Hooks/UseItemCount'
 import "./ItemCount.css"
 
 

@@ -1,6 +1,22 @@
+footer{
+    margin-bottom: 1%;
+    margin-top: 5%;
+    padding: 1%;
+}
+
 .brandsFooter{
     display: flex;
     align-items: center;
+    font-size: x-large;
+    color: rgba(255, 255, 0, 0.987);
+    margin-right: 5%;
+}
+
+.navFooter{
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    font-size: large;
 }
 
 .fa-brands{

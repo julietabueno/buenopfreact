@@ -1,13 +1,15 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import { NavBar } from './navBar/NavBar';
+import { NavBar } from './NavBar/NavBar';
 import { ItemListContainer } from './ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from './ItemDetailContainer/ItemDetailContainer';
 import { Cart } from './Cart/Cart';
-import { CartProvider } from "../hooks/CartContext"
-import { Footer } from './footer/Footer';
+import { CartProvider } from "../Hooks/CartContext"
+import { Footer } from './Footer/Footer';
 import { Checkout } from './Cart/Checkout';
+import { Account } from './Account/Account';
+import { Contact } from './Contact/Contact';
 
 
 
@@ -15,7 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <CartProvider>
-        <div className='app'>
+        <div className='app container-fluid'>
 
           <NavBar />
           <Routes>
@@ -24,6 +26,8 @@ function App() {
             <Route path='/details/:id' element={<div className='appDetailContainer'><ItemDetailContainer /></div>} />
             <Route path="/cart" element={<Cart />} />
             <Route path='/checkout' element={<Checkout />} />
+            <Route path='/account' element={<Account />} />
+            <Route path='/contact' element={<Contact />} />
           </Routes>
           <Footer />
         </div>

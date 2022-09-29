@@ -1,12 +1,45 @@
 .navbar {
     background-image: url(https://i.pinimg.com/736x/43/5a/bc/435abc03d7f9a8b7b4ba4ee9c6abaaa1.jpg);
     width: 100%;
+    margin-top: 2%;
+    border-color: rgba(255, 255, 0, 0.987);
+    box-shadow: rgba(255, 255, 0, 0.987);
+
 }
 
-.imglogoNav {
-    width: 50px;
+.linksNavbar {
+    font-size: large;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: grey;
 }
 
 .imglogoNavLego {
-    width: 150px;
+    width: 180px;
+    cursor: pointer;
+}
+
+
+.btnCarrito {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+}
+
+.navbarColor01 {
+    background-color: black;
+}
+
+.filtroNavbar {
+    font-size: 130%;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(255, 255, 0, 0.987);
+}
+
+.navlink{
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(255, 255, 0, 0.987);
+    font-size: large;
 }

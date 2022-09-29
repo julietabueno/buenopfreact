@@ -14,17 +14,25 @@
     width: 800px;
     height: 800px;
 }
-
-.imgLego {
-    border-radius: 50%;
-    width: 150px;
-}
-
-.cardDetail {
+.contDetailImg{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+}
+.imgLego {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+h2{
+    font-size: large;
+    margin-top: 20px;
+}
+.coleccion {
+    text-transform: uppercase;
+    font-size: large;
 }
 
 .cardDetail2 {
@@ -33,6 +41,12 @@
     align-items: center;
 }
 
+.contDetailDesc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .description {
     margin: 3%;
     padding-top: 2%;
@@ -40,9 +54,7 @@
     text-align: justify;
 }
 
-.coleccion {
-    text-transform: uppercase;
-}
+
 
 .imglogo {
     width: 100px;

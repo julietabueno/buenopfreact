@@ -34,7 +34,7 @@ export const ItemListContainer = () => {
     return (
         <>
             {
-                productList.length ? < ItemList className="divListContainer" productList={productList} /> : <Loader />
+                productList.length ? < ItemList productList={productList} /> : <Loader />
             }
         </>
     )
