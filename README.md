@@ -7,6 +7,8 @@ Soy Julieta, realice mi proyecto final para REACT.js sobre un ecommerce de figur
 ![Presentación sin título (10)](https://user-images.githubusercontent.com/104010163/193627152-fa544ed9-472b-4ca4-88ea-c72897241fc6.jpg)
 ![Presentación sin título (11)](https://user-images.githubusercontent.com/104010163/193627168-49286583-9cc2-4f5a-8322-3b805e997553.jpg)
 
+# Video:
+(https://youtu.be/27DkYj081Z8)
 
 # Informacion:
 - Estudiante: Julieta Bueno
