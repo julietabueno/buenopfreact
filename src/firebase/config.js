@@ -3,7 +3,7 @@ import { getFirestore } from "firebase/firestore"
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBcMtRyEN1euFCCqPy6vJKx7s3i5hv8iN0"/* process.env.REACT_APP_API_KEY */,
+    apiKey:  '${process.env.REACT_APP_API_KEY}' ,
     authDomain: "lego-app-e4d06.firebaseapp.com",
     projectId: "lego-app-e4d06",
     storageBucket: "lego-app-e4d06.appspot.com",
