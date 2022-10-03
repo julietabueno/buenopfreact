@@ -24,13 +24,13 @@ Soy Julieta, realice mi proyecto final para REACT.js sobre un ecommerce de figur
 # Backend
 - Firestore
 
+# Librerías
+- Bootstrap
+- Google Fonts
+- Font-Awesome
 
-Introduction: 
-La App se trata de un e-commerce de la marca Lego. 
-
-Features:
-- Navegacion por navbar
-- Carrito de compras
+# Control de codigo fuente
+- git
 
 # Getting Started with Create React App
 
