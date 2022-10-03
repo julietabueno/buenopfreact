@@ -4,7 +4,7 @@ import "./Footer.css"
 export const Footer = () => {
     return (
         <>
-            <footer className="main-footer footer bg-secondary container-fluid d-flex flex-nowrap justify-content-evenly">
+            <footer className="main-footer footer  container-fluid d-flex flex-nowrap justify-content-evenly">
                 <div className="container-fluid">
                     <div className="d-flexd-inline-flex justify-content-between align-items-center">
                         <div className="row ">

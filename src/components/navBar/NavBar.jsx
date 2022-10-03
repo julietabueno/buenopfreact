@@ -6,7 +6,7 @@ import { CartWidget } from '../CartWidget/CartWidget';
 export const NavBar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <nav className="navbar navbar-expand-lg  ">
         <div className="container-fluid">
           <Link to='/'><a className="navbar-brand"><img className='imglogoNavLego' src="/assets/LogoLego.png" alt="Logo LEGO" /></a> </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@ export const NavBar = () => {
                     </li>}
                   </Link>
                 </ul>
-                &lt;
+                
               </li>
             </ul>
       

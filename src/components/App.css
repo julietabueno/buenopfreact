@@ -16,7 +16,13 @@
 }
 
 .app {
-    background-color: rgb(78, 77, 77);
+    background-image: url("https://media.admagazine.com/photos/61f9616c9b19d943aa117c2a/16:9/w_1280,c_limit/GettyImages-521952820.jpg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
