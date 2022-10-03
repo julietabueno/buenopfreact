@@ -42,9 +42,8 @@ export const Checkout = () => {
     }
 
     /* creo la funcion para actualizar el stock una vez que realizo la compra */
-    const updateStock = (item) => {
+    const updateStock = () => {
         cart.forEach(item => {
-            console.log(item)
             const docRef = doc(db, 'productos', item.id)
             const updateStock = item.stock - item.quantity;
             updateDoc(docRef, {
@@ -65,10 +64,8 @@ export const Checkout = () => {
 
     }
 
-
     return (
         <>
-
 
             {load ? <Loader />
                 : (!orderID && <div>

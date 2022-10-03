@@ -11,7 +11,6 @@ export const ItemDetail = ({ item }) => {
     console.log({ item })
     //Aca se setea si el user hace la compra o no. Traigo la funcion del context
     const { addToCart } = useContext(CartContext);
-    /*  const { id } = useParams() */
     //indico si el usuario realizo la compra
     const [goToCart, setGoToCart] = useState(false);
 

@@ -1,5 +1,22 @@
-Title: 
-BuenoPfReact
+# Ecommerce REACt Julieta Bueno - Coderhouse
+Soy Julieta, realice mi proyecto final para REACT.js sobre un ecommerce de figuras de LEGO. 
+# Imagenes:
+image.png
+
+# Informacion:
+- Estudiante: Julieta Bueno
+- Github: https://github.com/julietabueno
+- Curso: React / Coderhouse
+- Comision: 34715
+- Profesor: Francisco Pugh
+- Tutor: Emanuel Acosta
+
+# Frontend
+- React.js
+
+# Backend
+- Firestore
+
 
 Introduction: 
 La App se trata de un e-commerce de la marca Lego. 
