@@ -63,43 +63,17 @@
     padding-right: 2%;
 }
 
-/* Order */
-/* .cardFInal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.cardTitleH5 {
-    color: black;
-    font-size: xx-large;
-}
-
-.cardtextH5 {
-    color: black;
-    font-size: x-large;
-}
-
-.linkOtraCompra {
+.formCheckout {
+    margin-top: 7%;
+    margin-bottom: 6%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-decoration: none;
 }
-
-.h5Compra {
-    font-size: large;
-    color: antiquewhite;
-    text-decoration: none;
-}
- */
 
 .textCheckout {
-    color: rgba(255, 255, 0, 0.987);
-    font-size: large;
+    color: black;
+    font-size: x-large;
     padding-top: 1%;
-
 }
 
 .btnCheckout {
@@ -125,14 +99,8 @@
 
 /* checkout */
 
-.bodyCheckout{
-    background-image:url(https://firebasestorage.googleapis.com/v0/b/lego-app-e4d06.appspot.com/o/bgLego.jpeg?alt=media&token=bf7a9afe-907b-47ac-92e9-2737d7e61e35);
-    padding-top: 5%;
-    padding-bottom: 5%;
+.bodyCheckout {
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/lego-app-e4d06.appspot.com/o/bgLego.jpeg?alt=media&token=bf7a9afe-907b-47ac-92e9-2737d7e61e35);
+    padding: 10%;
 }
 
-
-.cardChechout{
-    margin-left: 30%;
-  
-}

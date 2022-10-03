@@ -5,13 +5,21 @@ export const Contact = () => {
   return (
     <div className='contact'>
       <ul className="list-group list-group-flush">
-        <li className="list-group-item">An item</li>
-        <li className="list-group-item">A second item</li>
-        <li className="list-group-item">A third item</li>
-        <li className="list-group-item">A fourth item</li>
-        <li className="list-group-item">And a fifth one</li>
+        <li className="list-group-item">Contactate con Nosotros</li>
+        <li className="list-group-item"><span class="material-symbols-outlined">
+          mail
+        </span> figuraslego@lego.com</li>
+        <li className="list-group-item"><i className="fa-brands fa-linkedin" />@figuraslego</li>
+        <li className="list-group-item"> <i className="fa-brands fa-twitter" />@figuraslego</li>
+        <li className="list-group-item"> <i className="fa-brands fa-instagram" />@figuraslego</li>
+        <li className="list-group-item"> <i className="fa-brands fa-whatsapp" />+ 54 11 5378 9097</li>
+        
       </ul>
     </div>
 
   )
 }
+
+
+
+

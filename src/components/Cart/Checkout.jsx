@@ -65,7 +65,7 @@ export const Checkout = () => {
     }
 
     return (
-        <>
+        <div className="formCheckout">
 
             {load ? <Loader />
                 : (!orderID && <div>
@@ -109,8 +109,8 @@ export const Checkout = () => {
                     orderID && (
 
                         <div className="bodyCheckout">
-                            <div className="card cardChechout" style={{ width: '30rem' }}>
-                                <div className="card-body">
+                            <div className="card ">
+                                <div className="card-body cardChechout">
                                     <h5 className="card-title">Compra Finalizada con Exito</h5>
                                     <p className="card-text">{`Su nº de órden es: ${orderID}`}</p>
                                     <Link to="/"><h5 className="card-link">Realizar otra compra</h5></Link>
@@ -124,7 +124,7 @@ export const Checkout = () => {
                 }
             </div>
 
-        </>
+        </div>
     )
 }
 

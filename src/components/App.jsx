@@ -8,7 +8,6 @@ import { Cart } from './Cart/Cart';
 import { CartProvider } from "../Hooks/CartContext"
 import { Footer } from './Footer/Footer';
 import { Checkout } from './Cart/Checkout';
-import { Account } from './Account/Account';
 import { Contact } from './Contact/Contact';
 
 
@@ -26,7 +25,6 @@ function App() {
             <Route path='/details/:id' element={<div className='appDetailContainer'><ItemDetailContainer /></div>} />
             <Route path="/cart" element={<Cart />} />
             <Route path='/checkout' element={<Checkout />} />
-            <Route path='/account' element={<Account />} />
             <Route path='/contact' element={<Contact />} />
           </Routes>
           <Footer />

@@ -41,11 +41,7 @@ export const NavBar = () => {
       
               <nav>
                 <ul className="nav nav-fill">
-                  <Link to='/account'>
-                    <li className="nav-item">
-                      <a className="nav-link navlink" href="#">Mi cuenta</a>
-                    </li>
-                  </Link>
+
                   <Link to='/contact'>
                     <li className="nav-item">
                       <a className="nav-link navlink">Contacto</a>

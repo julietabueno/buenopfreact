@@ -11,12 +11,7 @@ export const Footer = () => {
                             <div className="col d-flex navFooter justify-content-start">
                                 <nav>
                                     <ul className="nav nav-fill">
-                                        <Link to='/account'>
-                                            <li className="nav-item">
-                                                <a className="nav-link" >Mi cuenta</a>
-                                            </li>
-                                        </Link>
-                                        <Link to='/'>
+                                        <Link to='/contact'>
                                             <li className="nav-item">
                                                 <a className="nav-link">Contacto</a>
                                             </li>
@@ -27,9 +22,10 @@ export const Footer = () => {
 
                             <div className="col d-flex ">
                                 <div className="col brandsFooter justify-content-end">
-                                    <i className="fa-brands fa-facebook" />
+                                    <i className="fa-brands fa-twitter" />
                                     <i className="fa-brands fa-linkedin" />
-                                    <i className="fa-brands fa-instagram" />
+                                    <i className="fa-brands fa-instagram" />  
+                                    <i className="fa-brands fa-whatsapp" />
                                 </div>
                             </div>
                         </div>
