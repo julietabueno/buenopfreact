@@ -22,10 +22,47 @@ export const Footer = () => {
 
                             <div className="col d-flex ">
                                 <div className="col brandsFooter justify-content-end">
-                                    <i className="fa-brands fa-twitter" />
-                                    <i className="fa-brands fa-linkedin" />
-                                    <i className="fa-brands fa-instagram" />  
-                                    <i className="fa-brands fa-whatsapp" />
+                                    {/* Icono con Link de WhatsApp */}
+                                    <a
+                                        href="https://chat.whatsapp.com/"
+                                        aria-label="WhatsApp oficial"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <i className="fa-brands fa-whatsapp" />
+                                    </a>
+                                    {/* Icono con Link de linkedin */}
+                                    <a
+                                        href="https://www.linkedin.com/feed/?trk=nav_responsive_tab_home"
+                                        aria-label="Linkedin oficial de la tienda"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <i className="fa-brands fa-linkedin" />
+                                    </a>
+
+                                    {/* Icono con Link de twitter */}
+                                    <a
+                                        href="https://twitter.com/"
+                                        aria-label="twitter oficial de la tienda"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <i className="fa-brands fa-twitter" />
+                                    </a>
+
+
+                                    {/* Icono con Link de instagram */}
+                                    <a
+                                        href="https://www.instagram.com/"
+                                        aria-label="Instagram oficial de la tienda"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <i className="fa-brands fa-instagram" />
+                                    </a>
+
+
                                 </div>
                             </div>
                         </div>
