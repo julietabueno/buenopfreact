@@ -1,8 +1,7 @@
 # Ecommerce REACt Julieta Bueno - Coderhouse
 Soy Julieta, realice mi proyecto final para REACT.js sobre un ecommerce de figuras de LEGO. 
 # Imagenes:
-<<<<<<< HEAD
-=======
+
 ![Presentación sin título](https://user-images.githubusercontent.com/104010163/193594099-8df31db7-a0f7-41cf-ba84-a2bc576f42fe.jpg)
 ![Presentación sin título (1)](https://user-images.githubusercontent.com/104010163/193594189-d82a26bf-705b-437f-965d-bea44a2295a4.jpg)
 ![Presentación sin título (2)](https://user-images.githubusercontent.com/104010163/193594194-7a385718-b183-4234-a1b0-b40470fe8121.jpg)
@@ -10,7 +9,7 @@ Soy Julieta, realice mi proyecto final para REACT.js sobre un ecommerce de figur
 ![Presentación sin título (4)](https://user-images.githubusercontent.com/104010163/193594204-68415a63-3483-443e-b2cb-77891d95086c.jpg)
 ![Presentación sin título (5)](https://user-images.githubusercontent.com/104010163/193594206-873ddc7b-6a9c-475f-89b4-71da1385fe22.jpg)
 ![Presentación sin título (6)](https://user-images.githubusercontent.com/104010163/193594210-f1d09f54-d72b-46ee-a9bf-125f8fc0ddd5.jpg)
->>>>>>> d5e05a24e57d8a1c8372545f2630030102cbb2e4
+
 
 
 # Informacion:
